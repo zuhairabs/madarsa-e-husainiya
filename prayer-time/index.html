@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Time - Shia</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/logo.jpg" alt="">
+        <div class="title">
+            <h1>Prayer Time</h1>
+        </div>
+        <img class="mosque" src="img/mosque.png" alt="mosque">
+        <img class="lantern" src="img/lantern.png" alt="lantern">
+    </header>
+    <div class="sub-title">
+        <div>
+            <form>
+                <img class="icon" src="img/placeholder.png" alt="">
+                <input id="locPlace" type="text" placeholder="Mumbai">
+                <button>Submit</button>
+            </form>
+        </div>
+        <div>
+            <button id ="pdf">Export PDF</button>
+            <button>Export Image</button>
+        </div>
+    </div>
+    <div class="container">
+        <table id="time-table">
+            <tr>
+                <th id="eMonth">Month</th>
+                <th id="aMonth">Month</th>
+                <th>Fajr</th>
+                <th>Dhuhr</th>
+                <th>Maghrib</th>
+                <th>Sunrise</th>
+                <th>Sunset</th>
+            </tr>
+              <!-- Dynamic Data Here -->
+        </table>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+
+</html>

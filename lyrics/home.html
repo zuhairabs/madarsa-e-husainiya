@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Madarsa E Husainiya | Lyrics</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="red" />
+<meta name="author" content="Madarsa E Husainiya" />
+<!-- CSS dependencies -->
+<link rel="stylesheet" href="resources/css/framework7.material.css">
+<link rel="stylesheet" href="resources/css/framework7.material.colors.css">
+<link rel="stylesheet" href="resources/css/custom8510.css" />
+<link rel="stylesheet" href="resources/css/tabulous.css" />
+<!-- JS dependencies (order matters!) -->
+<!-- <script src="cordova.js"></script> -->
+</head>
+
+<body>
+<div class="panel-overlay"></div>
+<div class="panel panel-left panel-cover">
+  <div style="background:#540201; height:100%">
+    <div class="panel-header"><span>Nauha <img width="50" style="padding-right:0px !important" src="resources/images/logo.png" align="absmiddle" /> Lyrics</span></div>
+    <div class="list-block">
+      <ul class="panelList">
+        <li><a href="about.html" class="item-link close-panel">
+          <div class="item-content">About Us</div>
+          </a></li>
+        <li><a href="request.html" class="item-link close-panel">
+          <div class="item-content">Request Lyrics</div>
+          </a></li>
+        <li><a href="send.html" class="item-link close-panel">
+          <div class="item-content">Send Lyrics</div>
+          </a></li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="views">
+  <div class="view view-main">
+    
+    <div class="pages navbar-fixed toolbar-fixed">
+      <div data-page="index" class="page">
+        <!-- Top Navbar. In Material theme it should be inside of the page-->
+        <div class="navbar">
+          <div class="navbar-inner brown">
+            <div class="left"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+            <div class="center title">Nauha Lyrics</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="banner"> <img src="resources/images/banner1.png" style="width:100%; -webkit-box-shadow: 0px 0px 8px 2px #000000;box-shadow: 0px 0px 8px 2px #000000;" /> </div>
+          <div class="navigation">
+            <div class="navchild" align="center">
+              <div class="widthclass">
+                <div class="circleparent"> <a href="nauha.html">
+                  <div id="nauha" class="circle"></div>
+                  <div class="link">Nauha</div>
+                  </a> </div>
+                <div class="circleparent"> <a href="manqabat.html">
+                  <div id="manqabat" class="circle"></div>
+                  <div class="link">Manqabat</div>
+                  </a> </div>
+              </div>
+            </div>
+            <div class="navchild" align="center">
+              <div class="widthclass">
+                <div class="circleparent"> <a href="marsiya.html">
+                  <div id="marsiya" class="circle"></div>
+                  <div class="link">Marsiya</div>
+                  </a> </div>
+                <div class="circleparent"> <a href="searchpage.html">
+                  <div id="searchbytl" class="circle"></div>
+                  <div class="link">Search</div>
+                  </a> </div>
+              </div>
+            </div>
+          </div>
+          <div id="adsmain">
+            <div class="advert"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="popover popover-menu">
+  <div class="popover-angle"></div>
+  <div class="popover-inner">
+    <div class="list-block">
+      <ul>
+        <li id="video"><a href="#" style="font-size:15px" class="external list-button item-link"><img align="absmiddle" style="padding-right:10px; padding-left:2px" src="resources/img/video.png" width="20"/> Watch Video</a></li>
+        <li id="audio"><a href="#" style="font-size:15px" class="dialogBox list-button item-link"><img align="absmiddle" style="padding-right:10px" src="resources/img/audio.png" width="23"/> Listen Audio</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="popover popover-smenu">
+  <div class="popover-angle"></div>
+  <div class="popover-inner">
+    <div class="list-block">
+      <ul>
+        <li><a href="#" onClick="shareSavedLyrics()" style="font-size:15px" class="list-button item-link"><img align="absmiddle" style="padding-right:10px" src="resources/img/share.png" width="25"/>Share Lyrics</a></li>
+        <li id="videoSaved"><a href="#" style="font-size:15px" class="external list-button item-link"><img align="absmiddle" style="padding-right:10px; padding-left:2px" src="resources/img/video.png" width="20"/> Watch Video</a></li>
+        <li id="audioSaved"><a href="#" style="font-size:15px" class="dialogBoxSaved list-button item-link"><img align="absmiddle" style="padding-right:10px" src="resources/img/audio.png" width="23"/> Listen Audio</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="picker-modal picker-modal-demo">
+      <div class="toolbar theme-red">
+        <div class="toolbar-inner">
+          <div class="left"></div>
+          <div class="right"><a href="#" style="font: 16px segoe-semibold;" class="link close-picker">Done</a></div>
+        </div>
+      </div>
+      <div class="picker-modal-inner">
+        <div class="player" style="padding:10px; margin:0 auto" align="center">
+            	<br>
+                <audio preload="auto" controls id="sourceUrl" src="kuchbhi.html"></audio><br><br>
+                <a href="#" id="downloadBtn" class="button-darkbrown button button-raised " onClick="DownloadAudio()">Download</a>                
+            </div>
+      </div>
+    </div>
+
+</body>
+
+<!-- Mirrored from m.nauhalyricsapp.in/home.html by HTTrack Website Copier/3.x [XR&CO'2017], Tue, 20 Apr 2021 15:42:00 GMT -->
+</html>
+<script type="text/javascript" src="resources/js/jquery-2.1.4.min.js"></script>
+<script src="resources/js/idle.js"></script>
+<script>
+	    setIdleTimeout(3000); 
+		document.onIdle = function() { $('.zoomParent').fadeOut('slow');} 
+		document.onBack = function(isIdle) { if (isIdle){ $('.zoomParent').fadeIn('slow');} }
+		
+		function increaseFontSize(){
+			var size = $("#lyrics-data").css('fontSize');
+			size = size.replace('px', '');
+			var newsize = parseInt(size)+2;
+			if(newsize <= 40){
+				$('#lyrics-data').css({fontSize: newsize+'px'});
+			}
+		}
+		
+		function increaseFontSizeS(){
+			var size = $("#lyricContainer").css('fontSize');
+			size = size.replace('px', '');
+			var newsize = parseInt(size)+2;
+			if(newsize <= 40){
+				$('#lyricContainer').css({fontSize: newsize+'px'});
+			}
+		}
+
+		function decreaseFontSize(){
+			var size = $("#lyrics-data").css('fontSize');
+			size = size.replace('px', '');
+			var newsize = parseInt(size)-2;
+			if(newsize >= 16){
+				$('#lyrics-data').css({fontSize: newsize+'px'});
+			}
+		}
+		
+		function decreaseFontSizeS(){
+			var size = $("#lyricContainer").css('fontSize');
+			size = size.replace('px', '');
+			var newsize = parseInt(size)-2;
+			if(newsize >= 16){
+				$('#lyricContainer').css({fontSize: newsize+'px'});
+			}
+		}
+
+</script>
+<script src="resources/js/framework7.js"></script>
+<script src="resources/js/tabulous.js"></script>
+<script src="resources/js/scripta6f3.js"></script>

@@ -1,0 +1,412 @@
+@font-face{
+	font-family: 'segoe-regular';
+	src: url(segoeui.ttf)
+	}
+
+@font-face{
+	font-family: 'segoe-semibold';
+	src: url(segoeuib.ttf)
+	}
+
+body { background: #fff; padding:0;overflow-x: hidden; margin:0}
+body.ui-mobile-viewport { padding: 0; }
+body, input, textarea, select, button { font-family: segoe-regular; }
+
+
+/*::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #999;
+  border:1px solid #666;
+  
+}*/ 
+
+img { max-width: 100%; }
+
+
+p.intro {
+	font-size: .96em;
+	line-height: 1.3;
+	border-top: 1px solid #75ae18;
+	border-bottom: 0;
+	background: none;
+	margin: 1.5em 0;
+	padding: 1.5em 15px 0;
+}
+p.intro strong {
+	color:  #558e08;
+}
+
+@media all and (max-width:369px) and (min-width:200px){
+
+	#nauha{
+		background:url(../images/nauha.png) center top no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+	}
+	
+	#manqabat{
+		background:url(../images/manqabat.png) center top no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+	}
+	
+	#marsiya{
+		background:url(../images/marsiya.png) center top no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+	}
+	
+	#searchbytl{
+		background:url(../images/searchbytl.png) center top no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+	}
+
+	.widthclass{width:90%}	
+	.circleparent{
+		width:50%;
+		height: 130px;
+		float:left
+	}
+	.circle, .cycle-bg-image{
+		border-radius: 100%;
+		height: 110px;
+		margin: 5% 5% 0 5%;
+		text-align: center;
+		width: 110px;
+	}
+	.circleparent a{    
+		color: #333333 !important;
+		font-family: segoe-semibold;
+		text-decoration: none;
+		font-size:17px;
+	}
+	.navchild{
+		clear:both; 
+		margin:0 auto; 
+		height:165px	
+	}
+	
+	.Barsize{
+		width:53px;
+		height:25px;
+		margin-top:-2px
+	}
+	
+	/*.advert{
+		height:60px!important;
+	}*/
+	.banner{
+		margin:0;
+		padding:0;
+	}
+}
+
+@media all and (max-width:375px) and (min-width:340px){
+	.navigation{
+		box-shadow: 2px 6px 2px 2px #ccc;
+		min-height: 385px;
+	}
+}
+
+@media all and (max-width:445px) and (min-width:370px){
+
+	#nauha{
+		background:url(../images/nauha.png) center top no-repeat;
+		-webkit-background-size: 100%
+	}
+	
+	#manqabat{
+		background:url(../images/manqabat.png) center top no-repeat;
+		-webkit-background-size: 100%;
+	}
+	
+	#marsiya{
+		background:url(../images/marsiya.png) center top no-repeat;
+		-webkit-background-size: 100%;
+	}
+	
+	#searchbytl{
+		background:url(../images/searchbytl.png) center top no-repeat;
+		-webkit-background-size: 100%;
+	}
+
+	.widthclass{width:90%}	
+	.circleparent{
+		width:50%;
+		height: 150px;
+		float:left;
+		padding-top:20px;
+		}
+	.circle, .cycle-bg-parent{
+		border-radius: 100%;
+		height: 110px;
+		margin: 5% 5% 0 5%;
+		text-align: center;
+		width: 110px;
+	}
+	.circleparent a{    
+		color: #333333 !important;
+		font-family: segoe-semibold;
+		text-decoration: none;
+	}
+
+	.navchild{
+		clear:both; 
+		margin:0 auto; 
+		height:200px	
+	}
+	
+	.Barsize{
+		width:53px;
+		height:25px;
+		margin-top:-2px
+	}
+	
+	.navigation{padding-bottom:80px}
+
+}
+@media all and (min-width:446px) and (max-width:1400px){
+	#nauha{
+		background:url(../images/nauha.png) no-repeat;
+	}
+	
+	#manqabat{
+		background:url(../images/manqabat.png) no-repeat;
+	}
+	
+	#marsiya{
+		background:url(../images/marsiya.png) no-repeat;
+	}
+	
+	#searchbytl{
+		background:url(../images/searchbytl.png) no-repeat;
+	}
+	
+	.widthclass{width:90%}	
+	
+	.circle, .cycle-bg-parent{
+		border-radius: 100%;
+		height: 166px;
+		margin: 5% 5% 0 5%;
+		text-align: center;
+		width: 166px;
+	}
+	.circleparent{
+		width:50%;
+		height: 200px;
+		float:left;
+	}
+	.circleparent a{    
+		color: #333333 !important;
+		font-family: segoe-semibold;
+		text-decoration: none;
+	}
+	.navchild{
+		clear:both; 
+		margin:0 auto; 
+		height:250px	
+	}
+	
+	.Barsize{
+		width:53px;
+		height:28px;
+		margin-top:-2px
+	}
+	.navigation{padding-bottom:110px}
+	.advert{
+		height: 120px!important;
+		text-align:center;
+	}
+		
+}
+
+.ui-listview-filter{display:none; padding-left:5px}
+
+#main{background:#FFF!important}
+
+.mybg, .myredbg{background:#750301!important; border: 1px solid #750301}
+
+.navigation{background:url(../images/navbg.png) no-repeat center; background-size: cover}
+
+#lyrics-data, .lyrics-data,  #lyricContainer{
+	background:#FFC;
+	padding:20px 15px 15px 15px;
+	font: 16px segoe-regular;
+	display:none;
+	min-height:94%;
+	height:auto;
+	
+}
+
+.menudrp{width:100%; font:15px segoe-regular}
+.menudrp ul{list-style:none; margin:0; padding:0}
+.menudrp ul li{padding: 10px 10px 10px 25px; border-bottom:1px solid #ccc; color:#333}
+.menudrp ul li:last-child{border-bottom:0px}
+.menudrp ul li:active{background:#39C}
+
+#panelClicker{
+	height: 18px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.abtContent{
+	font-family: segoe-regular;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+#about a.ui-btn-left, #request a.ui-btn-left, #send a.ui-btn-left{
+	display:none;
+}
+
+#pane ul li:active{
+	background:#39C;
+}
+
+#pane ul li span{padding-left:10px; color:#FFF !important}
+
+#pane ul li:first-child{font-size:18px !important;}
+
+#pane ul li img{padding-right:10px}
+
+#adsmain{
+	bottom: 0;
+    position: fixed!important;
+    width: 100%;
+}
+.advert{
+	height:72px;
+	position: -webkit-sticky;
+}
+
+@media all and (max-height: 480px){
+	.advert{
+		height:67px;
+	}
+
+}
+
+.ons-button-inner span{
+	font:16px segoe-semibold;
+}
+
+.filter{
+	display:none;
+}
+
+.navigation-bar__right .ons-icon{
+	color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 8px;	
+}
+
+.list-badge {
+    float: right;
+    font: 12px segoe-regular;
+    margin-right: 5px;
+    margin-top: 2px;
+	padding-top:1px;
+}
+
+.audio, .video{
+	display:none;
+}
+
+.menudrp ul li .ons-icon{
+	padding-right:10px;
+}
+.menudrp ul li a{
+	text-decoration:none;
+}
+
+#more{
+	font-size: 40px;
+    margin-top: 2px;
+    margin-right: 20px;
+}
+
+.brown{
+	background-color: #750301 !important;
+}
+
+.center{
+	color: #fff;
+    font: 17px/44px segoe-semibold;
+    text-align: center;
+}
+.title{
+	display: table!important;
+    width: 60%;
+}
+.circleparent a div.link{
+	padding-top:3px;
+}
+.panel-header{
+	text-align:center; padding:10px 0; background:#350100 !important; border-top:0px none !important;
+}
+.panel-header span{
+	padding-left:0px!important; margin-left:-30px; font-family:segoe-semibold; color:#fff; font-size:17px;
+}
+.list-block{
+	margin-top:0px!important;
+}
+.panelList .item-content {
+	color:#fff;
+}
+.panelList li{
+	border-bottom: 1px solid #350100 !important;
+	font-size:16px;
+}
+
+.panelList li:active{
+	background:#966;	
+}
+
+.button-darkbrown{
+	/*background:#750301!important;*/
+	background:#C00!important;
+	font-family:segoe-semibold;
+	font-size:16px;
+	color:#fff;
+	width:70%;
+	margin:0 auto;
+}
+#nauhaList .item-inner, #manqabatList .item-inner, #marsiyaList .item-inner, #savedNauhaList .item-inner, #savedManqabatList .item-inner, #savedMarsiyaList .item-inner, #albumList .item-inner, #list .item-inner, #searchList .item-inner, #favList .item-inner{
+	padding-left:10px;
+}
+
+.searchbar-not-found{
+	color: #c00;
+    font: 17px segoe-semibold;
+    text-align: center;	
+}
+#audio, #video{
+	display:none;
+}
+
+.item-title{
+	width:100%!important;
+}
+.item-title em{
+	color:#666;
+	font-size:14px;
+}
+
+.item-divider{
+	font-weight:bold;
+	font-size:15px;
+	text-align:center;
+}
