@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <img class="logo" src="img/logo.jpg" alt="">
+        <img class="logo" src="img/logo.png" alt="">
         <div class="title">
             <h1>Prayer Time</h1>
         </div>
@@ -25,16 +25,17 @@
     </header>
     <div class="sub-title">
         <div>
-            <form>
+            <form id="customLoc">
                 <img class="icon" src="img/placeholder.png" alt="">
                 <input id="locPlace" type="text" placeholder="Mumbai">
-                <button>Submit</button>
+                <button>Change</button>
             </form>
         </div>
         <div>
-            <button id ="pdf">Export PDF</button>
-            <button>Export Image</button>
+            <button onclick="Export.pdf()">Export PDF</button>
+            <button onclick="exportimage()">Export Image</button>
         </div>
+        <small style="font-size: 10px;">Note: ±1 Difference in Islamic Date can be due to Moon Sighting</small>
     </div>
     <div class="container">
         <table id="time-table">
