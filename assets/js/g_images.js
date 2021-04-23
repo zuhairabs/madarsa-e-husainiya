@@ -1,3 +1,4 @@
+// Gallery Images
 $(document).ready(function ($) {
   var data = [{
     "id": "1",
@@ -102,15 +103,12 @@ $(document).ready(function ($) {
   }];
 
   function renderGallery(obj) {
-    console.log(obj.id);
-    console.log(obj.title);
-    console.log(obj.img);
 
     var html = `
     <div class="col-lg-4 col-md-4 col-sm-6 custom-grid col-12">
     <div class="service-single-item">
     <div class="service-single-img">
-    <img src="${obj.img}" alt="">
+    <img loading="lazy" src="${obj.img}" alt="">
     </div>
     <div class="service-text">
     <h2>${obj.title}</h2>
@@ -124,4 +122,68 @@ $(document).ready(function ($) {
   $.each(data, function(idx, obj) {
     renderGallery(obj);
   });
+});
+
+
+// Youtube Thumbnails
+$(document).ready(function ($) {
+  
+  function renderYTgallery(obj) {
+
+    var html = `
+    <div class="col-lg-4 col-md-4 col-sm-6 custom-grid col-12">
+    <div class="service-single-item">
+    <div class="service-single-img">
+    <img loading="lazy" src="${obj.snippet.thumbnails.high}" alt="">
+    </div>
+    <div class="service-text">
+    <h2><a href="videos.html">${obj.snippet.title}</a></h2>
+    </div>
+    </div>
+    </div>
+    `
+    $('#YTgallery_container').append(html);
+  }
+  
+  fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyA32ohOnDkx67VeyorHKWxuHOc1ItPxFRM&channelId=UCaWupZMa9uYmN-pfJOgaZug&part=snippet,id&order=date&maxResults=20')
+  .then(response => response.json())
+  .then(data => {
+    $.each(data.items, function(idx, obj) {
+      renderYTgallery(obj);
+      //console.log(obj);
+    });
+  })
+  .catch(err => console.log(err));
+});
+
+
+// Youtube Videos
+$(document).ready(function ($) {
+  
+  function renderVideos(obj) {
+
+    var html = `
+    <div class="col-lg-4 col-md-4 col-sm-6 custom-grid col-12">
+    <div class="service-single-item">
+    <div class="service-single-img">
+    <iframe width="100%" height="350" loading="lazy" src="https://youtube.com/embed/${obj.id.videoId}" allowfullscreen frameBorder="0"></iframe>
+    </div>
+    <div class="service-text">
+    <h2>${obj.snippet.title}</h2>
+    </div>
+    </div>
+    </div>
+    `
+    $('#YTvideo_container').append(html);
+  }
+  
+  fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyA32ohOnDkx67VeyorHKWxuHOc1ItPxFRM&channelId=UCaWupZMa9uYmN-pfJOgaZug&part=snippet,id&order=date&maxResults=20')
+  .then(response => response.json())
+  .then(data => {
+    $.each(data.items, function(idx, obj) {
+      renderVideos(obj);
+      //console.log(obj)
+    });
+  })
+  .catch(err => console.log(err));
 });
