@@ -145,7 +145,7 @@ $(document).ready(function ($) {
     $('#YTgallery_container').append(html);
   }
   
-  fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyA32ohOnDkx67VeyorHKWxuHOc1ItPxFRM&channelId=UCaWupZMa9uYmN-pfJOgaZug&part=snippet,id&order=date&maxResults=20')
+  fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyC3wVhwr_r5xAFA5Fw1IxYtmKs9C19SYiE&channelId=UCaWupZMa9uYmN-pfJOgaZug&part=snippet,id&order=date&maxResults=20')
   .then(response => response.json())
   .then(data => {
     $.each(data.items, function(idx, obj) {
@@ -177,7 +177,7 @@ $(document).ready(function ($) {
     $('#YTvideo_container').append(html);
   }
   
-  fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyA32ohOnDkx67VeyorHKWxuHOc1ItPxFRM&channelId=UCaWupZMa9uYmN-pfJOgaZug&part=snippet,id&order=date&maxResults=20')
+  fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyC3wVhwr_r5xAFA5Fw1IxYtmKs9C19SYiE&channelId=UCaWupZMa9uYmN-pfJOgaZug&part=snippet,id&order=date&maxResults=20')
   .then(response => response.json())
   .then(data => {
     $.each(data.items, function(idx, obj) {
