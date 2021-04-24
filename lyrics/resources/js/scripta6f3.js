@@ -121,7 +121,7 @@ myApp.onPageInit('nauha', function (page) {
 	$$('#adsmain').attr('hidden','hidden')			
 
 	$$.ajax({
-			url : "https://alzulfiquar.com/lyrics/apiv1_2.php?q=nauhakhwan&type=Nauha&format=json",
+			url : "http://alzulfiquar.com/lyrics/apiv1_2.php?q=nauhakhwan&type=Nauha&format=json",
 			timeout : 30000,
 			success : function(data) {
 				
@@ -156,7 +156,7 @@ myApp.onPageInit('manqabat', function () {
 	$$('#adsmain').attr('hidden','hidden')			
 								
 	$$.ajax({
-			url : "https://alzulfiquar.com/lyrics/apiv1_2.php?q=nauhakhwan&type=Manqabat&format=json",
+			url : "http://alzulfiquar.com/lyrics/apiv1_2.php?q=nauhakhwan&type=Manqabat&format=json",
 			timeout : 30000,
 			success : function(data) {
 				
@@ -191,7 +191,7 @@ myApp.onPageInit('marsiya', function () {
 	$$('#adsmain').attr('hidden','hidden')			
 	
 	$$.ajax({
-			url : "https://alzulfiquar.com/lyrics/apiv1_2.php?q=nauhakhwan&type=Marsiya&format=json",
+			url : "http://alzulfiquar.com/lyrics/apiv1_2.php?q=nauhakhwan&type=Marsiya&format=json",
 			timeout : 30000,
 			success : function(data) {
 				
@@ -225,7 +225,7 @@ myApp.onPageInit('album', function (page) {
 	var params = page.query;
 	
 	$$.ajax({
-			url : "https://alzulfiquar.com/lyrics/apiv1_2.php?q=year&type="+params.type+"&id="+params.id+"&format=json",
+			url : "http://alzulfiquar.com/lyrics/apiv1_2.php?q=year&type="+params.type+"&id="+params.id+"&format=json",
 			timeout : 30000,
 			success : function(data) {
 				
@@ -259,7 +259,7 @@ myApp.onPageInit('list', function (page) {
 	var params = page.query;
 	$$("#listTitle").text(params.name+' ('+params.year+')');
 	$$.ajax({
-			url : "https://alzulfiquar.com/lyrics/apiv1_2.php?q=list&type="+params.type+"&id="+params.id+"&year="+params.year+"&format=json",
+			url : "http://alzulfiquar.com/lyrics/apiv1_2.php?q=list&type="+params.type+"&id="+params.id+"&year="+params.year+"&format=json",
 			timeout : 60000,
 			success : function(data) {
 				
@@ -318,7 +318,7 @@ myApp.onPageInit('lyrics', function (page) {
 	var params = page.query;
 	$$("#lyricsTitle").text(params.title);
 	$$.ajax({
-			url : "https://alzulfiquar.com/lyrics/apiv1_2.php?q=lyric&id="+params.id,
+			url : "http://alzulfiquar.com/lyrics/apiv1_2.php?q=lyric&id="+params.id,
 			timeout : 30000,
 			success : function(response) {
 				var data = JSON.parse(response);
@@ -411,7 +411,7 @@ myApp.onPageInit('search', function (page) {
 	}
 	
 	$$.ajax({
-		url : "https://alzulfiquar.com/lyrics/apiv1_2.php?q=searchcount&term="+params.keyword,
+		url : "http://alzulfiquar.com/lyrics/apiv1_2.php?q=searchcount&term="+params.keyword,
 		timeout : 60000,
 		success : function(response) {
 			$$("#searchTitle").text(response+" Lyrics Found!");
@@ -426,7 +426,7 @@ myApp.onPageInit('search', function (page) {
 	});  
 	
 	$$.ajax({
-		url : "https://alzulfiquar.com/lyrics/apiv1_2.php?q=search&format=json&term="+params.keyword,
+		url : "http://alzulfiquar.com/lyrics/apiv1_2.php?q=search&format=json&term="+params.keyword,
 		timeout : 30000,
 		success : function(data) {
 			var response = JSON.parse(data);

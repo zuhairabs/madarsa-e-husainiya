@@ -124,6 +124,95 @@ $(document).ready(function ($) {
   });
 });
 
+//Videos
+$(document).ready(function ($) {
+  var data = [{
+    "id": "1",
+    "title": "Khooni Pursa | MSRK | 24 Muharram 1442 | Golibar Sabeel",
+    "link": "I58CxXMuyro",
+  }, {
+    "id": "2",
+    "title": "MSRK PURSEDAARI 24th Muharram 1442 A.H 2020 Golibar Sabeel santacruz",
+    "link": "mISfMGILJxc",
+  }, {
+    "id": "3",
+    "title": "PURSEDAARI 24TH MUHARRAM 2020",
+    "link": "a_H96tP1HAc",
+  }, {
+    "id": "4",
+    "title": "Qamazani 9th Muharram 1442 AH",
+    "link": "t-VMJ_WKiXM",
+  }, {
+    "id": "5",
+    "title": "Qamazani Muharram 2020 part1",
+    "link": "pvURcfvCyjQ",
+  }, {
+    "id": "6",
+    "title": "Parcham Khushaayi 2020",
+    "link": "IbHf39juMXc",
+  }, {
+    "id": "7",
+    "title": "Dammam 9th Muharram 2020 Golibar Santa Cruz",
+    "link": "oIzsnIT3O7A",
+  }, {
+    "id": "8",
+    "title": "Juloos-e-Sayyad-e-Sajjad | Golibar | 1441 Hijri 2019",
+    "link": "DVrrU2FbQs0",
+  }, {
+    "id": "9",
+    "title": "GOLIBAR JULOOS 08/10/2018",
+    "link": "T0XAUXzUcGE",
+  }, {
+    "id": "10",
+    "title": "29th Muharram Juloos 2019 | Golibar Santacruz",
+    "link": "evGMVZQYQjI",
+  }, {
+    "id": "11",
+    "title": "Anjuman e Rasool e Khuda, Juloos Bimaar e Karbala - Golibar Santacruz",
+    "link": "TUwPx9ITikU",
+  }, {
+    "id": "12",
+    "title": "Anjuman e Rasool e Khuda | Golibar, Khar | Mumbai",
+    "link": "d6UwhezESGM",
+  }, {
+    "id": "13",
+    "title": "ANJUMAN-E-PANJETANI VIKHROLI SHABBEDARI MATAM ZANI GOLIBAR",
+    "link": "O_9pEHzs3y8",
+  }, {
+    "id": "14",
+    "title": "ANJUMAN E GHAMKHAWRAN E KARBALA | GOLIBAR 19TH NOVEMBER 2017 1439 HIJRI",
+    "link": "Jne23-ii-m8",
+  }, {
+    "id": "15",
+    "title": "|| Hay Sajjad ne gum ||1442 HIJRI || MSRK Golibar || 25 muharram ||",
+    "link": "9AKTDD3ukcs",
+  }, {
+    "id": "16",
+    "title": "25 MOHARRAM Golibar || 1442 HIJRI || Rone ke liye kafi hai Sajjad tera naam || PART -1",
+    "link": "AOMDpSiW6Oc",
+  }];
+
+  function renderVideos(obj) {
+
+    var html = `
+    <div class="col-lg-4 col-md-4 col-sm-6 custom-grid col-12">
+    <div class="service-single-item">
+    <div class="service-single-img">
+    <iframe width="100%" height="350" loading="lazy" src="https://youtube.com/embed/${obj.link}" allowfullscreen frameBorder="0"></iframe>
+    </div>
+    <div class="service-text">
+    <h2>${obj.title}</h2>
+    </div>
+    </div>
+    </div>
+    `
+    $('#video_container').append(html);
+  }
+
+  $.each(data, function(idx, obj) {
+    renderVideos(obj);
+  });
+});
 
 // Youtube Thumbnails
 $(document).ready(function ($) {
@@ -134,7 +223,7 @@ $(document).ready(function ($) {
     <div class="col-lg-4 col-md-4 col-sm-6 custom-grid col-12">
     <div class="service-single-item">
     <div class="service-single-img">
-    <img loading="lazy" src="${obj.snippet.thumbnails.high}" alt="">
+    <img loading="lazy" src="${obj.snippet.thumbnails.high.url}" alt="">
     </div>
     <div class="service-text">
     <h2><a href="videos.html">${obj.snippet.title}</a></h2>
@@ -160,7 +249,7 @@ $(document).ready(function ($) {
 // Youtube Videos
 $(document).ready(function ($) {
   
-  function renderVideos(obj) {
+  function renderYTVideos(obj) {
 
     var html = `
     <div class="col-lg-4 col-md-4 col-sm-6 custom-grid col-12">
@@ -181,7 +270,7 @@ $(document).ready(function ($) {
   .then(response => response.json())
   .then(data => {
     $.each(data.items, function(idx, obj) {
-      renderVideos(obj);
+      renderYTVideos(obj);
       //console.log(obj)
     });
   })
